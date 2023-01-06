@@ -18,7 +18,7 @@ export default async function HomePage() {
     if (previewData()) {
         return (<PreviewSuspense fallback={
             <div role='status'>
-                <p className='text-center, text-lg animate-pulse text-[#F7AB0A0'>Loading Preview data</p>
+                <p className='text-center, text-lg animate-pulse text-[#F7AB0A0]'>Loading Preview data</p>
             </div>
         }>
             <PreviewBlogList query={query} />
