@@ -16,6 +16,13 @@ interface Post extends Base {
     title: string;
     description: string;
 }
+interface Author extends Base {
+    bio: Block[];
+    image: Image;
+    name: string;
+    slug: Slug;
+
+}
 
 interface Image {
     _type: "image";
