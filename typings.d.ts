@@ -11,7 +11,7 @@ interface Post extends Base {
     author: AuthStoreOptions;
     body: Block[];
     categories: Category[];
-    MainImage: Image;
+    mainImage: Image;
     slug: Slug;
     title: string;
     description: string;
