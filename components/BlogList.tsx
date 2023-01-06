@@ -1,3 +1,5 @@
+import Image from "next/image";
+
 type Props = {
     posts: Post[];
 };
@@ -5,9 +7,20 @@ type Props = {
 
 
 function BlogList({ posts }: Props) {
-    console.log(posts.length)
     return (
-        <div>BlogList</div>
+        <div><hr className="border-[#F7AB0A]" />
+            {posts.map(post => (
+                <div key={post._id}>
+                    <div>
+                        <Image className="object-cover object-left lg:object-center"
+                            src={urlFor(post.mainImage).url()}
+                            alt={post.author.name}
+                            fill
+                        />
+                    </div>
+                </div>
+            ))}
+        </div>
     )
 }
 
